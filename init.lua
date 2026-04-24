@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	{ "nvim-tree/nvim-web-devicons", opts = {} },
 	{ "nvim-treesitter/nvim-treesitter", event = "BufReadPre" },
 	{ "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000 },
 	{ "neovim/nvim-lspconfig", event = "BufReadPre" },
