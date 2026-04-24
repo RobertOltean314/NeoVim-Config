@@ -8,6 +8,8 @@ vim.opt.tabstop = 5
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true       -- use spaces instead of tabs
 vim.opt.autoindent = true      -- you already have this
+vim.opt.textwidth = 80
+vim.opt.formatoptions:append("t")
 
 -- search
 vim.opt.ignorecase = true      -- case insensitive search
