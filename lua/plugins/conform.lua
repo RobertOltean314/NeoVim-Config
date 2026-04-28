@@ -8,7 +8,6 @@ require("conform").setup({
 		lua = { "stylua" },
 	},
 })
--- keymap (note the < > around C-A-l)
 vim.keymap.set({ "n", "v", "i" }, "<C-A-l>", function()
 	require("conform").format({ timeout_ms = 10000 })
 end, { desc = "Format file" })

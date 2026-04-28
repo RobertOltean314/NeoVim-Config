@@ -1,2 +1,5 @@
 vim.keymap.set("n", "<leader>tt", ":split | terminal<CR>")
-vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
+	vim.cmd("w")
+	vim.api.nvim_input("<Esc>")
+end, { desc = "Save file" })

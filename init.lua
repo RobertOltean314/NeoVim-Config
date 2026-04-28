@@ -62,6 +62,7 @@ require("lazy").setup({
 			require("luasnip.loaders.from_vscode").lazy_load()
 		end,
 	},
+	{ "zbirenbaum/copilot.lua" },
 })
 
 require("core.keymaps")
@@ -75,3 +76,4 @@ require("plugins.autopairs")
 require("plugins.git")
 require("plugins.conform")
 require("plugins.lualine")
+require("plugins.copilot")
