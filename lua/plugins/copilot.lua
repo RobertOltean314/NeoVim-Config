@@ -3,12 +3,17 @@ require("copilot").setup({
 		enabled = true,
 		auto_trigger = true,
 		keymap = {
-			accept = "<M-l>", -- Alt+l to accept full suggestion
-			accept_word = "<M-w>", -- Alt+w to accept one word
-			next = "<M-]>", -- Alt+] next suggestion
-			prev = "<M-[>", -- Alt+[ previous suggestion
-			dismiss = "<M-e>", -- Alt+e dismiss
+			accept = "<M-l>",
+			accept_word = "<M-w>",
+			next = "<M-]>",
+			prev = "<M-[>",
+			dismiss = "<M-e>",
 		},
 	},
 	panel = { enabled = false },
 })
+
+-- Toggle copilot suggestions
+vim.keymap.set("n", "<leader>ct", function()
+	require("copilot.suggestion").toggle_auto_trigger()
+end, { desc = "Copilot: Toggle auto suggestions" })

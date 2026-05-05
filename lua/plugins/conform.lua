@@ -2,10 +2,18 @@ require("conform").setup({
 	formatters_by_ft = {
 		ruby = { "rubocop" },
 		javascript = { "prettier" },
+		typescript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescriptreact = { "prettier" },
 		html = { "prettier" },
+		eruby = { "htmlbeautifier" },
 		css = { "prettier" },
 		json = { "prettier" },
 		lua = { "stylua" },
+		yaml = { "prettier" },
+		go = { "gofmt" },
+		python = { "black" },
+		rust = { "rustfmt" },
 	},
 })
 vim.keymap.set({ "n", "v", "i" }, "<C-A-l>", function()
